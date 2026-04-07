@@ -1,6 +1,6 @@
 ﻿:root {
     --primary-dark: #0a192f;
-    --secondary-blue: #4a76a8;
+    --secondary-blue: #3b5f8e;
     --pastel-blue: #d9e4f1;
     --gold: #d4af37;
     --white: #ffffff;
@@ -220,8 +220,8 @@ body {
 
 /* --- PAGINA PRINCIPAL --- */
 .invite-page {
-    background: linear-gradient(rgba(43, 79, 122, 0.88), rgba(43, 79, 122, 0.95)),
-        url('assets/IMG_20260403_185022.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(66, 128, 214, 0.88), rgba(46, 88, 176, 0.95)),
+        url('') center/cover no-repeat;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -235,16 +235,16 @@ body {
     background-image:
         radial-gradient(circle, rgba(245, 250, 255, 0.75) 0 1.2px, transparent 2.4px),
         radial-gradient(circle, rgba(225, 235, 250, 0.7) 0 1.1px, transparent 2.2px);
-    background-size: 140px 140px, 200px 200px;
-    background-position: 0 0, 80px 60px;
-    opacity: 0.7;
+    background-size: 130px 130px, 190px 190px;
+    background-position: 0 0, 70px 55px;
+    opacity: 0.6;
     pointer-events: none;
     z-index: 0;
     animation: silver-fizz 18s linear infinite;
 }
 
 .invite-page::after {
-    opacity: 0.5;
+    opacity: 0.45;
     animation-duration: 26s;
     animation-direction: reverse;
 }
@@ -277,7 +277,7 @@ body {
     width: min(420px, 92%);
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 24px 60px rgba(5, 18, 33, 0.2);
+    box-shadow: 0 24px 60px rgba(5, 18, 33, 0.18);
     border-radius: 26px;
     text-align: center;
     color: var(--ink);
@@ -292,68 +292,111 @@ body {
 }
 
 .invite-content {
-    padding: 36px 24px 0;
+    padding: 34px 26px 0;
 }
 
 
 /* --- CONTEUDO PRINCIPAL --- */
 .bible-verse {
     font-style: italic;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
     line-height: 1.6;
     color: var(--secondary-blue);
+    font-size: 0.88rem;
 }
 
 .names-highlight {
     font-family: var(--font-fancy);
-    font-size: 3.6rem;
+    font-size: 3.8rem;
+    color: var(--ink);
 }
 
 .subtitle {
     margin-top: 10px;
     letter-spacing: 2px;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
     color: var(--secondary-blue);
 }
 
 /* --- CONTADOR --- */
 .countdown-container {
     margin: 28px auto 26px;
-    padding: 18px;
+    padding: 18px 30px 24px;
     background: transparent;
     border-radius: 16px;
-    border: 1px solid rgba(74, 118, 168, 0.25);
-    box-shadow: 0 10px 24px rgba(9, 20, 36, 0.08);
+    border: none;
+    box-shadow: none;
     max-width: 340px;
 }
 
 .countdown-title {
     font-size: 0.7rem;
     letter-spacing: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     color: #8fb7e1;
 }
 
-#countdown { display: flex; justify-content: space-around; gap: 10px; }
+.countdown-zone {
+    position: relative;
+    padding: 8px 12px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 0 0;
+}
+
+.count-item {
+    position: relative;
+    min-width: 76px;
+    padding: 14px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-item::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-top-color: rgba(212, 175, 55, 0.9);
+    border-right-color: rgba(212, 175, 55, 0.6);
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+    pointer-events: none;
+    animation: ring-spin 10s linear infinite;
+}
 
 .count-item span {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 2.1rem;
     display: block;
     color: #8fb7e1;
 }
 
-.count-item small { font-size: 0.65rem; }
+.count-item small {
+    font-size: 0.65rem;
+    color: #8fb7e1;
+}
 
 /* --- GRADE DE INFO --- */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     align-items: center;
-    margin: 24px 0 18px;
+    margin: 26px 0 22px;
     border-top: 1px solid var(--pastel-blue);
     border-bottom: 1px solid var(--pastel-blue);
-    padding: 18px 0;
+    padding: 20px 0;
 }
 
 .info-grid small,
@@ -369,8 +412,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 34px;
-    margin: 36px 0 18px;
+    gap: 30px;
+    margin: 32px 0 20px;
 }
 
 .stack-item {
@@ -427,17 +470,40 @@ body {
     width: 66px;
     height: 66px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--secondary-blue);
+    background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.08) 55%),
+        linear-gradient(160deg, var(--icon-light), var(--icon-main));
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 10px 20px rgba(4, 12, 22, 0.35);
-    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 12px 22px rgba(4, 12, 22, 0.18), 0 10px 24px var(--icon-shadow);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    filter: saturate(1.08);
 }
 
-.stack-icon i { font-size: 1.05rem; }
+.stack-icon::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent 60%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.stack-icon::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, transparent 55%, rgba(255, 255, 255, 0.35) 70%, transparent 80%);
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.stack-icon i { font-size: 1.2rem; }
 
 .stack-label {
     font-size: 0.6rem;
@@ -447,8 +513,21 @@ body {
 }
 
 .stack-icon:hover {
-    transform: translateY(-4px);
-    background: #ffffff;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 16px 26px rgba(4, 12, 22, 0.2), 0 14px 30px var(--icon-shadow);
+    filter: saturate(1.18) brightness(1.03);
+}
+
+.stack-item .stack-icon {
+    --icon-main: #5a74f6;
+    --icon-light: #8aa1ff;
+    --icon-shadow: rgba(90, 116, 246, 0.45);
+}
+
+/* --- FAIXA ANTES DO FOOTER --- */
+.invite-band {
+    height: 40px;
+    background: linear-gradient(90deg, rgba(59, 95, 142, 0.15), rgba(59, 95, 142, 0.55), rgba(59, 95, 142, 0.15));
 }
 
 /* --- FOOTER --- */
@@ -475,22 +554,34 @@ body {
     background: transparent;
     border: 1px solid rgba(74, 118, 168, 0.45);
     box-shadow: 0 0 0 rgba(74, 118, 168, 0);
-    animation: pulse 1.8s ease-in-out infinite;
+    animation: pulse 2.1s ease-in-out infinite;
     transform-origin: center;
     will-change: transform, box-shadow;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.85; box-shadow: 0 0 0 rgba(74, 118, 168, 0); }
-    50% { transform: scale(1.06); opacity: 1; box-shadow: 0 0 18px rgba(74, 118, 168, 0.45); }
-    100% { transform: scale(1); opacity: 0.85; box-shadow: 0 0 0 rgba(74, 118, 168, 0); }
+    0% { transform: scale(1); opacity: 0.9; box-shadow: 0 0 0 rgba(74, 118, 168, 0); }
+    50% { transform: scale(1.04); opacity: 1; box-shadow: 0 0 14px rgba(74, 118, 168, 0.35); }
+    100% { transform: scale(1); opacity: 0.9; box-shadow: 0 0 0 rgba(74, 118, 168, 0); }
 }
 
 
 @media (max-width: 600px) {
     .splash-name { font-size: 3.5rem; }
     .info-grid { grid-template-columns: 1fr; gap: 12px; }
-    #countdown { flex-direction: column; }
+    #countdown {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 0;
+    }
+    .count-item {
+        min-width: 0;
+        padding: 12px 8px;
+    }
+    .count-item::after {
+        inset: 1px;
+    }
     .invite-content { padding: 30px 20px 0; }
     .hero-photo { height: auto; }
 }
@@ -500,4 +591,6 @@ body {
     #welcome-screen { transition: none; }
     .stack-icon:hover { transform: none; }
     .pulse-text { animation: none; }
+    .count-item::before,
+    .count-item::after { animation: none; }
 }

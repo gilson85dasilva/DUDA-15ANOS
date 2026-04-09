@@ -281,6 +281,13 @@ body {
     padding: 28px 22px 0;
 }
 
+.names-highlight {
+    font-family: var(--font-fancy);
+    font-size: 3.2rem;
+    color: #2f5db6;
+    margin-bottom: 10px;
+}
+
 /* --- CONTEUDO PRINCIPAL (NOVO) --- */
 .date-strip {
     display: flex;
@@ -573,7 +580,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    opacity: 0.45;
+    opacity: 0.7;
     margin: 0 auto 14px;
 }
 
@@ -583,6 +590,29 @@ body {
     font-size: 0.9rem;
     color: var(--secondary-blue);
     text-transform: uppercase;
+}
+
+.footer-handle {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: #2f5db6;
+    text-transform: lowercase;
+}
+
+.footer-whatsapp {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2f5db6;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.footer-whatsapp i {
+    font-size: 1.1rem;
 }
 
 .pulse-text {
@@ -621,16 +651,25 @@ body {
         bottom: 10px;
     }
     .splash-name { font-size: 3.5rem; }
-    .info-grid { grid-template-columns: 1fr; gap: 12px; }
+    .info-grid {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 6px;
+    }
+    .info-grid small { font-size: 0.6rem; }
+    .info-grid strong { font-size: 0.8rem; }
+    .big-day { font-size: 2.4rem; }
     #countdown {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 14px;
+        justify-content: center;
+        gap: 10px;
         padding: 0;
     }
     .count-item {
-        min-width: 0;
-        padding: 12px 8px;
+        min-width: 56px;
+        height: 56px;
+        padding: 8px 6px;
     }
     .count-item::after {
         inset: 1px;

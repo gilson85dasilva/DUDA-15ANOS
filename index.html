@@ -13,31 +13,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="invite-page">
-    <main id="welcome-screen">
-        <div class="overlay"></div>
-        <div class="glass-container">
-            <div class="glass-ring" aria-hidden="true"></div>
-            <div class="monogram"></div>
-            <p class="eyebrow"></p>
-            <h1 class="splash-name">Duda</h1>
-            <p class="splash-subhead">15 ANOS</p>
-            <a class="glass-link" href="#convite" aria-label="Abrir convite"></a>
+    <main id="welcome-screen" class="entry-screen">
+        <div class="entry-backdrop" aria-hidden="true"></div>
+        <div class="entry-layout">
+            <div class="entry-hero">
+                <img src="assets/entry.jpg" alt="Foto da Ana Luisa" class="entry-photo">
+                <div class="entry-caption">
+                    <p class="entry-name">Duda</p>
+                    <p class="entry-age">15 anos</p>
+                </div>
+                <div class="entry-footer">
+                    <div class="entry-envelope-wrap">
+                        <span class="entry-envelope-name">
+                            <span class="entry-envelope-call">Toque para abrir</span>
+                            <span class="entry-envelope-person"></span>
+                        </span>
+                        <img src="assets/envelope.jpg" alt="Envelope do convite" class="entry-envelope-img">
+                    </div>
+                    <a class="entry-link" href="#convite" aria-label="Abrir convite"></a>
+                </div>
+            </div>
         </div>
     </main>
 
     <main id="main-content" class="invite-wrapper" aria-live="polite">
         <section class="invite-card" id="convite">
-            <img class="hero-photo" src="assets/IMG_20260403_185022.jpg" alt="Foto principal do convite">
+            <img class="hero-photo" src="assets/duda balões.jpg" alt="Foto principal do convite">
 
             <div class="invite-content">
+                <h1 class="names-highlight">Duda XVanos</h1>
+                <p>Momentos mágicos merecem ser divididos com pessoas especiais.</p>
+                
+
+
                 <p class="bible-verse">
                     “O valor das coisas não está no tempo que elas duram, mas na intensidade com que elas acontecem.
                      Por isso existem momentos inesquecíveis, coisas inexplicáveis e pessoas incomparáveis.” <br>
                 
                 </p>
 
-                <h1 class="names-highlight">Maria Eduarda</h1>
-                <p class="subtitle">CELEBRANDO MEUS 15 ANOS</p>
 
                 <div class="countdown-container">
                     <p class="countdown-title">FALTAM APENAS:</p>
@@ -52,29 +66,33 @@
                 </div>
 
                 <div class="info-grid">
-                    <div><small>ANO</small><br><strong>2026</strong></div>
+                    <div><small></small><br><strong>SÁBADO</strong></div>
                     <div><small>ABRIL</small><br><span class="big-day">25</span></div>
-                    <div><small>HORÁRIO</small><br><strong>20:00H</strong></div>
+                    <div><small>Às</small><br><strong>20:30h</strong></div>
                 </div>
 
                 <div class="icon-stack" aria-label="Ações do convite">
-                    <div class="stack-item">
-                        <a href="#local" class="stack-icon" aria-label="Local">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </a>
-                        <span class="stack-label">Local</span>
+                    <div class="icon-stack-text">
+                        <p class="icon-stack-title">Interagir</p>
+                        <p class="icon-stack-subtitle">Toque ou clique nos ícones para interagir</p>
                     </div>
                     <div class="stack-item">
-                        <a href="#confirmar" class="stack-icon" aria-label="Confirmar presença">
+                        <a href="https://www.google.com/maps/place/ESPA%C3%87O+LAGO+Festas+e+Eventos/@-22.2854025,-46.3789888,300m/data=!3m1!1e3!4m6!3m5!1s0x94c971a1891c3f59:0x4162045ade0edac9!8m2!3d-22.28541!4d-46.3789619!16s%2Fg%2F11h71jpmqd!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" class="stack-icon" aria-label="Local" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                        <span class="stack-label">Local:Espaço Lago Eventos<br> Ouro Fino - Mg</span>
+                    </div>
+                    <div class="stack-item">
+                        <a href="https://wa.me/5535998699360?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20presen%C3%A7a%20nos%2015%20anos%20da%20Duda.%20Nome%3A%20%5BSEU%20NOME%5D.%20Quantidade%20de%20convidados%3A%20%5BQTD%5D." class="stack-icon" aria-label="Confirmar presença" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <span class="stack-label">Confirmar</span>
+                        <span class="stack-label">Confirme sua presença!<br> até dia 20/04/2026</span>
                     </div>
                     <div class="stack-item">
                         <a href="#manual" class="stack-icon" aria-label="Manual do convidado">
                             <i class="fas fa-book-open"></i>
                         </a>
-                        <span class="stack-label">Manual</span>
+                        <span class="stack-label">Manual do convidado</span>
                     </div>
                 </div>
 
@@ -92,6 +110,7 @@
 
             <div class="invite-band" aria-hidden="true"></div>
             <footer class="invite-footer">
+                <img class="footer-image" src="assets/duda15.jpg" alt="Duda 15 anos">
                 <p class="footer-text pulse-text">Esperamos vocês</p>
             </footer>
         </section>

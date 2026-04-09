@@ -1,25 +1,37 @@
 ﻿// Transicao automatica do splash para a pagina principal
 function iniciarTransicao() {
     const welcome = document.getElementById('welcome-screen');
-    const btn = document.querySelector('.glass-link');
+    const btn = document.querySelector('.entry-link, .glass-link');
     const container = document.querySelector('.glass-container');
+    const envelopeWrap = document.querySelector('.entry-envelope-wrap');
+    const entryHero = document.querySelector('.entry-hero');
     const main = document.getElementById('main-content');
 
     if (!welcome || !btn) return;
 
     const handle = (event) => {
         event.preventDefault();
-        welcome.classList.add('leaving');
+        if (envelopeWrap) {
+            envelopeWrap.classList.add('fading');
+        }
+        if (entryHero) {
+            entryHero.classList.add('fading');
+        }
+        const fadeDelay = 900;
+        const exitDelay = 500;
         setTimeout(() => {
-            if (main) {
-                main.classList.add('show');
-                welcome.style.display = 'none';
-                main.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                const destino = btn.getAttribute('href') || 'pagina.html';
-                window.location.href = destino;
-            }
-        }, 400);
+            welcome.classList.add('leaving');
+            setTimeout(() => {
+                if (main) {
+                    main.classList.add('show');
+                    welcome.style.display = 'none';
+                    main.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    const destino = btn.getAttribute('href') || 'pagina.html';
+                    window.location.href = destino;
+                }
+            }, exitDelay);
+        }, fadeDelay);
     };
 
     btn.addEventListener('click', handle);
@@ -39,7 +51,7 @@ function iniciarContador() {
 
     if (!elements.days || !elements.hours || !elements.minutes || !elements.seconds) return;
 
-    const dataEvento = new Date('Apr 25, 2026 20:00:00').getTime();
+    const dataEvento = new Date('Apr 25, 2026 20:30:00').getTime();
 
     const tick = () => {
         const agora = Date.now();

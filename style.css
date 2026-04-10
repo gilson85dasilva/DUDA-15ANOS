@@ -324,7 +324,11 @@ body {
 
 .invite-content > p {
     margin: 12px 0;
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    text-align: justify;
+    text-indent: 0.9rem;
+    color: #2c4a74;
 }
 
 .bible-verse {

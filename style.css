@@ -312,14 +312,23 @@ body {
 }
 
 .invite-content {
-    padding: 28px 22px 0;
+    padding: 30px 24px 6px;
 }
 
 .names-highlight {
     font-family: var(--font-fancy);
     font-size: 3.2rem;
     color: #2f5db6;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.invite-content > p {
+    margin: 12px 0;
+    line-height: 1.7;
+}
+
+.bible-verse {
+    margin: 18px 0 10px;
 }
 
 /* --- CONTEUDO PRINCIPAL (NOVO) --- */
@@ -374,7 +383,7 @@ body {
 
 /* --- CONTADOR --- */
 .countdown-container {
-    margin: 18px auto 22px;
+    margin: 22px auto 14px;
     padding: 10px 0 8px;
     background: transparent;
     border-radius: 16px;
@@ -445,10 +454,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     align-items: center;
-    margin: 26px 0 22px;
+    margin: 10px 0 26px;
     border-top: 1px solid var(--pastel-blue);
     border-bottom: 1px solid var(--pastel-blue);
-    padding: 20px 0;
+    padding:5px 0;
 }
 
 .info-grid .info-time {
@@ -477,8 +486,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 34px;
-    margin: 28px 0 16px;
+    gap: 30px;
+    margin: 34px 0 18px;
 }
 
 .icon-stack-text {
@@ -613,14 +622,14 @@ body {
 
 /* --- FAIXA ANTES DO FOOTER --- */
 .invite-band {
-    height: 40px;
+    height: 36px;
     background: linear-gradient(90deg, rgba(59, 95, 142, 0.15), rgba(59, 95, 142, 0.55), rgba(59, 95, 142, 0.15));
 }
 
 /* --- FOOTER --- */
 .invite-footer {
-    margin-top: 24px;
-    padding: 24px 20px 34px;
+    margin-top: 20px;
+    padding: 22px 20px 30px;
     background: #f7f9fc;
     border-top: 1px solid var(--pastel-blue);
     text-align: center;

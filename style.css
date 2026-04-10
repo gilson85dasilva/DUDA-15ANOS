@@ -709,10 +709,10 @@ body {
 
 @media (max-width: 768px) {
     .entry-hero {
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-top: max(24px, env(safe-area-inset-top, 0px) + 32px);
-        padding-bottom: 32px;
+        padding-top: max(8px, env(safe-area-inset-top, 0px));
+        padding-bottom: max(8px, env(safe-area-inset-bottom, 0px));
         gap: 22px;
     }
 

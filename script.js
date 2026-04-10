@@ -1,4 +1,97 @@
-﻿// Transicao automatica do splash para a pagina principal
+function iniciarParticulas() {
+    const canvas = document.getElementById('particles-canvas');
+    if (!canvas) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let rafId = 0;
+
+    function countForViewport() {
+        return Math.min(140, Math.max(40, Math.floor(window.innerWidth / 10)));
+    }
+
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+
+    function makeParticle() {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 1.15 + 0.4;
+        return {
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 0.42,
+            r: Math.random() * 1.8 + 0.4,
+            a: Math.random() * 0.35 + 0.15
+        };
+    }
+
+    function step() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vx += (Math.random() - 0.5) * 0.055;
+            p.vy += (Math.random() - 0.5) * 0.045;
+
+            if (p.x < -4) p.x = width + 4;
+            if (p.x > width + 4) p.x = -4;
+            if (p.y < -4) p.y = height + 4;
+            if (p.y > height + 4) p.y = -4;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(200, 230, 255, ${p.a})`;
+            ctx.fill();
+        }
+        rafId = requestAnimationFrame(step);
+    }
+
+    function initMoving() {
+        resize();
+        particles = Array.from({ length: countForViewport() }, () => makeParticle());
+        cancelAnimationFrame(rafId);
+        step();
+    }
+
+    function drawStatic() {
+        resize();
+        ctx.clearRect(0, 0, width, height);
+        const n = Math.min(80, countForViewport());
+        for (let i = 0; i < n; i++) {
+            const p = makeParticle();
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r * 0.9, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(200, 230, 255, ${p.a * 0.85})`;
+            ctx.fill();
+        }
+    }
+
+    window.addEventListener('resize', () => {
+        if (prefersReduced) {
+            drawStatic();
+        } else {
+            initMoving();
+        }
+    });
+
+    if (prefersReduced) {
+        drawStatic();
+        return;
+    }
+
+    initMoving();
+}
+
+// Transicao automatica do splash para a pagina principal
 function iniciarTransicao() {
     const welcome = document.getElementById('welcome-screen');
     const btn = document.querySelector('.entry-link, .glass-link');
@@ -85,6 +178,7 @@ function iniciarContador() {
 }
 
 window.addEventListener('load', () => {
+    iniciarParticulas();
     iniciarTransicao();
     iniciarContador();
     const manualLink = document.querySelector('a[aria-label="Manual do convidado"]');

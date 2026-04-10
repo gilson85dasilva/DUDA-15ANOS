@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -14,10 +14,10 @@
 </head>
 <body class="invite-page">
     <main id="welcome-screen" class="entry-screen">
+        <canvas id="particles-canvas" class="particles-canvas" aria-hidden="true"></canvas>
         <div class="entry-backdrop" aria-hidden="true"></div>
         <div class="entry-layout">
             <div class="entry-hero">
-                <img src="assets/entry.jpg" alt="Foto da Ana Luisa" class="entry-photo">
                 <div class="entry-caption">
                     <p class="entry-name">Duda</p>
                     <p class="entry-age">15 anos</p>
@@ -26,7 +26,7 @@
                     <div class="entry-envelope-wrap">
                         <span class="entry-envelope-name">
                             <span class="entry-envelope-call">Toque para abrir</span>
-                            <span class="entry-envelope-person"></span>
+                            <span class="entry-envelope-person">Duda</span>
                         </span>
                         <img src="assets/envelope.jpg" alt="Envelope do convite" class="entry-envelope-img">
                     </div>
@@ -38,7 +38,7 @@
 
     <main id="main-content" class="invite-wrapper" aria-live="polite">
         <section class="invite-card" id="convite">
-            <img class="hero-photo" src="assets/duda balões.jpg" alt="Foto principal do convite">
+            <img class="hero-photo" src="assets/duda15.jpg" alt="Foto principal do convite">
 
             <div class="invite-content">
                 <h1 class="names-highlight">Duda XV</h1>
@@ -83,7 +83,7 @@
                         <span class="stack-label">Local:Espaço Lago Eventos<br> Ouro Fino - Mg</span>
                     </div>
                     <div class="stack-item">
-                        <a href="https://wa.me/5535998699360?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20presen%C3%A7a%20nos%2015%20anos%20da%20Duda.%20Nome%3A%20%5BSEU%20NOME%5D.%20Quantidade%20de%20convidados%3A%20%5BQTD%5D." class="stack-icon" aria-label="Confirmar presença" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/5535998699360?text=Ol%C3%A1%2C%20Confirmo%20minha%20presen%C3%A7a%20na%20festa%20de%2015%20anos%20da%20Duda%21" class="stack-icon" aria-label="Confirmar presença" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <span class="stack-label">Confirme sua presença!<br> até dia 20/04/2026</span>
@@ -110,13 +110,15 @@
 
             <div class="invite-band" aria-hidden="true"></div>
             <footer class="invite-footer">
-                <img class="footer-image" src="assets/duda15.jpg" alt="Duda 15 anos">
+                <img class="footer-image" src="assets/duda balões.jpg" alt="Duda 15 anos">
                 <p class="footer-text pulse-text">Esperamos vocês</p>
-                <p class="footer-handle">@gilson_dasilva</p>
-                <a class="footer-whatsapp" href="https://wa.me/5535998552840?text=Ol%C3%A1%21%20Seja%20bem-vindo%28a%29.%20Solicito%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Gilson da Silva">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>+55 35 99855-2840</span>
-                </a>
+                <div class="footer-contact">
+                    <a class="footer-handle" href="https://www.instagram.com/deservecreative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Deserve Creative (@deservecreative)">@DeserveCreative</a>
+                    <a class="footer-whatsapp" href="https://wa.me/5535998354313?text=Ol%C3%A1%21%20Seja%20bem-vindo%28a%29.%20Solicito%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Gilson da Silva">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>(35) 99835-4313</span>
+                    </a>
+                </div>
             </footer>
         </section>
     </main>

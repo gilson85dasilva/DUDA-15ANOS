@@ -455,9 +455,9 @@ body {
     grid-template-columns: 1fr 1.5fr 1fr;
     align-items: center;
     margin: 10px 0 26px;
-    border-top: 1px solid var(--pastel-blue);
-    border-bottom: 1px solid var(--pastel-blue);
-    padding:5px 0;
+    border-top: 1.5px solid rgba(47, 93, 182, 0.32);
+    border-bottom: 1.5px solid rgba(47, 93, 182, 0.32);
+    padding: 8px 0;
 }
 
 .info-grid .info-time {
@@ -622,7 +622,7 @@ body {
 
 /* --- FAIXA ANTES DO FOOTER --- */
 .invite-band {
-    height: 36px;
+    height: 96px;
     background: linear-gradient(90deg, rgba(59, 95, 142, 0.15), rgba(59, 95, 142, 0.55), rgba(59, 95, 142, 0.15));
 }
 
@@ -630,7 +630,7 @@ body {
 .invite-footer {
     margin-top: 20px;
     padding: 22px 20px 30px;
-    background: #f7f9fc;
+    background: linear-gradient(180deg, #e6f0ff 0%, #d2e3fb 100%);
     border-top: 1px solid var(--pastel-blue);
     text-align: center;
 }
